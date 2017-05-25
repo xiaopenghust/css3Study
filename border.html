@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			border:15px solid transparent;
+			width:300px;
+			padding:10px 20px;
+			background: linear-gradient(to left, red , blue);
+			text-shadow: 2px 2px 2px yellow;
+			box-shadow: 10px 10px 5px #888888,-10px -10px 5px #888888;
+			transform:rotate(180deg);
+		}
+		.round{
+			/* 
+				从图片的四个角为圆点,向水平和垂直方向扩展为一个矩形
+				1: 图片地址   
+				2: 高   
+				3: 宽  
+				4: 横向以什么方式做扩展; 
+				5: 纵向以什么方式做扩展;(可省略) 
+			*/
+			border-image: url(./border.png) 26 26 round round;  
+		}
+
+	</style>
+</head>
+<body>
+	<div class="round">
+		123456789
+	</div>
+</body>
+</html>

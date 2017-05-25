@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box1{
+			min-width:600px;
+			width: 100%;
+			min-height: 1000px;
+			position: relative;
+			height:100%;
+			background: white;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+		}
+
+		.logo{
+			position: absolute;
+			left:50%;
+			top:50%;
+			width:100px;
+			height: 100px;
+			background: yellow;
+			animation: rotateAni infinite 5s linear;
+		}
+
+		.leftBox{
+			width: 50%;
+			float: left;
+			min-height: 800px;
+			height:100%;
+			background: black;
+			position: absolute;
+			left:-800px;
+			transition: left 2s;
+			animation: toLeft 3s;
+		}
+
+		.rightBox{
+			width: 50%;
+			float: left;
+			min-height: 800px;
+			position: absolute;
+			height:100%;
+			right:-800px;
+			transition: left 2s;
+			animation: toRight 3s;
+			background: black;
+		}
+
+		@keyframes toLeft{
+			from {left: 0}
+			to {left: -800px}
+		}
+
+		@keyframes toRight{
+			from {right: 0}
+			to {right: -800px}
+		}
+
+		@keyframes rotateAni {
+		  from { transform: rotate(0deg); }
+		  to { transform: rotate(360deg); }
+		}
+	</style>
+	<script type="text/javascript">
+		setTimeout(function(){
+			document.getElementById("#box1").innerHTML = '';
+		}, 5000);
+
+	</script>
+</head>
+<body>
+	<div id="box1">
+		<div class="logo">
+		logo
+		</div>
+		<div class="leftBox">
+		</div>
+		<div class="rightBox">
+		</div>
+	</div>
+</body>
+</html>
